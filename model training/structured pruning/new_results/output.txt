@@ -1,0 +1,276 @@
+PS C:\Users\kishc\OneDrive\Desktop\undergradthesis>  c:; cd 'c:\Users\kishc\OneDrive\Desktop\undergradthesis'; & 'c:\python311\python.exe' 'c:\Users\kishc\.vscode\extensions\ms-python.debugpy-2025.18.0-win32-x64\bundled\libs\debugpy\launcher' '55143' '--' 'c:\Users\kishc\OneDrive\Desktop\undergradthesis\model training\structured pruning\str.py'
+2026-04-12 23:35:05.045015: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-04-12 23:35:12.549487: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+c:\python311\Lib\site-packages\keras\src\export\tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+WARNING:tensorflow:From c:\python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+============================================================
+Loading data and baseline weights...
+============================================================
+Train: 2080, Test: 520, Classes: 26
+2026-04-12 23:35:49.746176: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded 7 weight sets from baseline.
+
+============================================================
+Structured pruning at 30% sparsity...
+============================================================
+  Pruned architecture:
+    Conv1D: 22 filters (from 32)
+    Conv1D: 22 filters (from 32)
+    Conv1D: 44 filters (from 64)
+    Conv1D: 44 filters (from 64)
+    Conv1D: 89 filters (from 128)
+    Dense: 44 units (from 64)
+WARNING:tensorflow:From c:\python311\Lib\site-packages\tf_keras\src\backend.py:1400: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING:tensorflow:From c:\python311\Lib\site-packages\tf_keras\src\backend.py:6644: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From c:\python311\Lib\site-packages\tf_keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From c:\python311\Lib\site-packages\tf_keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1776033358.502359   28892 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1776033358.502637   28892 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-04-12 23:35:58.503887: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\kishc\AppData\Local\Temp\tmp0tv9enc8
+2026-04-12 23:35:58.507984: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-04-12 23:35:58.508119: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\kishc\AppData\Local\Temp\tmp0tv9enc8
+I0000 00:00:1776033358.524691   28892 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+2026-04-12 23:35:58.527124: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-04-12 23:35:58.596411: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\kishc\AppData\Local\Temp\tmp0tv9enc8
+2026-04-12 23:35:58.612067: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 108296 microseconds.
+2026-04-12 23:35:58.671297: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+c:\python311\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+  Parameters:     27,659
+  Size:           115.7 KB
+  Accuracy:       96.92%
+  Size reduction: 49.8%
+
+============================================================
+Structured pruning at 40% sparsity...
+============================================================
+  Pruned architecture:
+    Conv1D: 19 filters (from 32)
+    Conv1D: 19 filters (from 32)
+    Conv1D: 38 filters (from 64)
+    Conv1D: 38 filters (from 64)
+    Conv1D: 76 filters (from 128)
+    Dense: 38 units (from 64)
+W0000 00:00:1776033368.933391   28892 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1776033368.933709   28892 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-04-12 23:36:08.934240: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\kishc\AppData\Local\Temp\tmp1gjcfkrr
+2026-04-12 23:36:08.936638: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-04-12 23:36:08.936786: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\kishc\AppData\Local\Temp\tmp1gjcfkrr
+2026-04-12 23:36:08.952406: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-04-12 23:36:09.030331: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\kishc\AppData\Local\Temp\tmp1gjcfkrr
+2026-04-12 23:36:09.057727: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 123489 microseconds.
+c:\python311\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+  Parameters:     20,717
+  Size:           88.7 KB
+  Accuracy:       95.77%
+  Size reduction: 61.5%
+
+============================================================
+Structured pruning at 50% sparsity...
+============================================================
+  Pruned architecture:
+    Conv1D: 16 filters (from 32)
+    Conv1D: 16 filters (from 32)
+    Conv1D: 32 filters (from 32)
+    Conv1D: 32 filters (from 32)
+    Conv1D: 64 filters (from 64)
+    Dense: 32 units (from 64)
+W0000 00:00:1776033379.044968   28892 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1776033379.045215   28892 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-04-12 23:36:19.045627: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\kishc\AppData\Local\Temp\tmp5xfwdm8n
+2026-04-12 23:36:19.048328: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-04-12 23:36:19.048421: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\kishc\AppData\Local\Temp\tmp5xfwdm8n
+2026-04-12 23:36:19.065113: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-04-12 23:36:19.133697: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\kishc\AppData\Local\Temp\tmp5xfwdm8n
+2026-04-12 23:36:19.151017: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 105390 microseconds.
+c:\python311\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+  Parameters:     14,906
+  Size:           66.1 KB
+  Accuracy:       94.42%
+  Size reduction: 71.3%
+
+============================================================
+Structured pruning at 60% sparsity...
+============================================================
+  Pruned architecture:
+    Conv1D: 12 filters (from 32)
+    Conv1D: 12 filters (from 32)
+    Conv1D: 25 filters (from 32)
+    Conv1D: 25 filters (from 32)
+    Conv1D: 51 filters (from 64)
+    Dense: 25 units (from 64)
+W0000 00:00:1776033389.058257   28892 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1776033389.058556   28892 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-04-12 23:36:29.059035: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\kishc\AppData\Local\Temp\tmpz2x2y_yf
+2026-04-12 23:36:29.060692: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-04-12 23:36:29.060842: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\kishc\AppData\Local\Temp\tmpz2x2y_yf
+2026-04-12 23:36:29.080138: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-04-12 23:36:29.150347: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\kishc\AppData\Local\Temp\tmpz2x2y_yf
+2026-04-12 23:36:29.171719: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 112684 microseconds.
+c:\python311\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+  Parameters:     9,349
+  Size:           44.4 KB
+  Accuracy:       90.19%
+  Size reduction: 80.7%
+
+============================================================
+Structured pruning at 70% sparsity...
+============================================================
+  Pruned architecture:
+    Conv1D: 9 filters (from 32)
+    Conv1D: 9 filters (from 32)
+    Conv1D: 19 filters (from 32)
+    Conv1D: 19 filters (from 32)
+    Conv1D: 38 filters (from 64)
+    Dense: 19 units (from 64)
+W0000 00:00:1776033398.858547   28892 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1776033398.858968   28892 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-04-12 23:36:38.859803: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\kishc\AppData\Local\Temp\tmplxzitj_v
+2026-04-12 23:36:38.862977: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-04-12 23:36:38.863300: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\kishc\AppData\Local\Temp\tmplxzitj_v
+2026-04-12 23:36:38.884278: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-04-12 23:36:38.947998: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\kishc\AppData\Local\Temp\tmplxzitj_v
+2026-04-12 23:36:38.962183: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 102381 microseconds.
+c:\python311\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+  Parameters:     5,522
+  Size:           29.4 KB
+  Accuracy:       74.23%
+  Size reduction: 87.2%
+
+============================================================
+Structured pruning at 80% sparsity...
+============================================================
+  Pruned architecture:
+    Conv1D: 6 filters (from 32)
+    Conv1D: 6 filters (from 32)
+    Conv1D: 12 filters (from 32)
+    Conv1D: 12 filters (from 32)
+    Conv1D: 25 filters (from 32)
+    Dense: 12 units (from 64)
+W0000 00:00:1776033408.515016   28892 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1776033408.515361   28892 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-04-12 23:36:48.516036: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\kishc\AppData\Local\Temp\tmp0d75sbd2
+2026-04-12 23:36:48.518186: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-04-12 23:36:48.518383: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\kishc\AppData\Local\Temp\tmp0d75sbd2
+2026-04-12 23:36:48.543110: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-04-12 23:36:48.610506: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\kishc\AppData\Local\Temp\tmp0d75sbd2
+2026-04-12 23:36:48.631334: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 115297 microseconds.
+c:\python311\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+  Parameters:     2,475
+  Size:           17.5 KB
+  Accuracy:       23.08%
+  Size reduction: 92.4%
+
+============================================================
+Structured pruning at 90% sparsity...
+============================================================
+  Pruned architecture:
+    Conv1D: 3 filters (from 32)
+    Conv1D: 3 filters (from 32)
+    Conv1D: 6 filters (from 32)
+    Conv1D: 6 filters (from 32)
+    Conv1D: 12 filters (from 32)
+    Dense: 6 units (from 64)
+W0000 00:00:1776033417.302745   28892 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1776033417.303199   28892 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-04-12 23:36:57.303662: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\kishc\AppData\Local\Temp\tmpj0g4vccq
+2026-04-12 23:36:57.306532: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-04-12 23:36:57.306648: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\kishc\AppData\Local\Temp\tmpj0g4vccq
+2026-04-12 23:36:57.318055: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-04-12 23:36:57.392395: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\kishc\AppData\Local\Temp\tmpj0g4vccq
+2026-04-12 23:36:57.413055: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 109393 microseconds.
+c:\python311\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+  Parameters:     749
+  Size:           10.8 KB
+  Accuracy:       8.46%
+  Size reduction: 95.3%
+
+============================================================
+Structured pruning at 95% sparsity...
+============================================================
+  Pruned architecture:
+    Conv1D: 1 filters (from 32)
+    Conv1D: 1 filters (from 32)
+    Conv1D: 3 filters (from 32)
+    Conv1D: 3 filters (from 32)
+    Conv1D: 6 filters (from 32)
+    Dense: 3 units (from 64)
+W0000 00:00:1776033422.481295   28892 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1776033422.481661   28892 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-04-12 23:37:02.482340: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\kishc\AppData\Local\Temp\tmpgejajl3j
+2026-04-12 23:37:02.485250: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-04-12 23:37:02.485408: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\kishc\AppData\Local\Temp\tmpgejajl3j
+2026-04-12 23:37:02.497509: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-04-12 23:37:02.565699: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\kishc\AppData\Local\Temp\tmpgejajl3j
+2026-04-12 23:37:02.582503: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 100164 microseconds.
+c:\python311\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+  Parameters:     250
+  Size:           8.8 KB
+  Accuracy:       3.85%
+  Size reduction: 96.2%
+
+============================================================
+STRUCTURED PRUNING SUMMARY
+============================================================
+Sparsity       Params  Size (KB)   Accuracy  Size Red.
+----------------------------------------------------
+Baseline       56,922      230.3     98.27%          -
+ 30%           27,659      115.7     96.92%      49.8%
+ 40%           20,717       88.7     95.77%      61.5%
+ 50%           14,906       66.1     94.42%      71.3%
+ 60%            9,349       44.4     90.19%      80.7%
+ 70%            5,522       29.4     74.23%      87.2%
+ 80%            2,475       17.5     23.08%      92.4%
+ 90%              749       10.8      8.46%      95.3%
+ 95%              250        8.8      3.85%      96.2%
+
+Files saved to: c:\Users\kishc\OneDrive\Desktop\undergradthesis\model training\structured pruning\new_results
+PS C:\Users\kishc\OneDrive\Desktop\undergradthesis> 

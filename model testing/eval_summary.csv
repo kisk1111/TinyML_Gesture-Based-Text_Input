@@ -1,0 +1,11 @@
+model,accuracy,arena_bytes,arena_kb,avg_latency_us,avg_latency_ms,min_latency_us,max_latency_us,errors
+model_kd_big,95.96,8208,8.0,67484,67.48,67421,67537,0
+model_kd_big_pruned_30,93.27,6608,6.5,36139,36.14,36106,36186,0
+model_kd_big_pruned_40,87.69,6128,6.0,28027,28.03,27968,28070,0
+model_pruned_structured_30,96.92,10224,10.0,117992,117.99,117858,118036,0
+model_pruned_structured_40,95.77,9168,9.0,90834,90.83,90709,90884,0
+model_pruned_structured_50,94.42,8208,8.0,67367,67.37,67275,67426,0
+model_pruned_structured_60,90.19,7184,7.0,43953,43.95,43863,43980,0
+model_kd_big_pruned_30_quant_int8,82.88,5424,5.3,15363,15.36,15216,15445,0
+model_kd_big_quant_int8,91.73,6084,5.9,24469,24.47,24346,24638,0
+model_quant_int8,95.58,9028,8.8,76722,76.72,76566,76868,0

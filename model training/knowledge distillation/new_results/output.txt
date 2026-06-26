@@ -1,0 +1,694 @@
+PS C:\Users\kishc\OneDrive\Desktop\undergradthesis>  & 'c:\python311\python.exe' 'c:\Users\kishc\.vscode\extensions\ms-python.debugpy-2025.18.0-win32-x64\bundled\libs\debugpy\launcher' '58473' '--' 'c:\Users\kishc\OneDrive\Desktop\undergradthesis\model training\knowledge distillation\kd trainingv2.py' 
+2026-04-13 00:52:44.194378: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-04-13 00:52:47.807565: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+c:\python311\Lib\site-packages\keras\src\export\tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+WARNING:tensorflow:From c:\python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+============================================================
+Loading data and teacher model...
+============================================================
+Train: 2080, Test: 520, Classes: 26
+WARNING:tensorflow:From c:\python311\Lib\site-packages\tf_keras\src\backend.py:1400: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2026-04-13 00:52:55.923426: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From c:\python311\Lib\site-packages\tf_keras\src\backend.py:6644: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+Teacher (baseline) model loaded.
+WARNING:tensorflow:From c:\python311\Lib\site-packages\tf_keras\src\optimizers\__init__.py:317: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From c:\python311\Lib\site-packages\tf_keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+Teacher accuracy: 98.27%
+
+============================================================
+Student: small
+============================================================
+  Training standalone (no teacher)...
+  Parameters: 1,802
+Epoch 1/50
+104/104 [==============================] - 1s 4ms/step - loss: 3.2387 - categorical_accuracy: 0.0475 - val_loss: 3.2053 - val_categorical_accuracy: 0.0409
+Epoch 2/50
+104/104 [==============================] - 0s 3ms/step - loss: 3.1242 - categorical_accuracy: 0.0715 - val_loss: 3.0024 - val_categorical_accuracy: 0.0962
+Epoch 3/50
+104/104 [==============================] - 0s 3ms/step - loss: 2.9067 - categorical_accuracy: 0.0925 - val_loss: 2.7285 - val_categorical_accuracy: 0.1394
+Epoch 4/50
+104/104 [==============================] - 0s 3ms/step - loss: 2.6734 - categorical_accuracy: 0.1400 - val_loss: 2.4531 - val_categorical_accuracy: 0.2548
+Epoch 5/50
+104/104 [==============================] - 0s 4ms/step - loss: 2.4982 - categorical_accuracy: 0.1911 - val_loss: 2.2302 - val_categorical_accuracy: 0.3630
+Epoch 6/50
+104/104 [==============================] - 0s 3ms/step - loss: 2.3369 - categorical_accuracy: 0.2536 - val_loss: 2.0225 - val_categorical_accuracy: 0.4784
+Epoch 7/50
+104/104 [==============================] - 0s 2ms/step - loss: 2.1657 - categorical_accuracy: 0.3161 - val_loss: 1.8385 - val_categorical_accuracy: 0.4928
+Epoch 8/50
+104/104 [==============================] - 0s 2ms/step - loss: 2.0075 - categorical_accuracy: 0.3588 - val_loss: 1.6852 - val_categorical_accuracy: 0.5337
+Epoch 9/50
+104/104 [==============================] - 0s 2ms/step - loss: 1.9028 - categorical_accuracy: 0.3678 - val_loss: 1.5354 - val_categorical_accuracy: 0.5697
+Epoch 10/50
+104/104 [==============================] - 0s 2ms/step - loss: 1.8063 - categorical_accuracy: 0.4165 - val_loss: 1.4441 - val_categorical_accuracy: 0.6034
+Epoch 11/50
+104/104 [==============================] - 0s 2ms/step - loss: 1.7544 - categorical_accuracy: 0.4297 - val_loss: 1.3376 - val_categorical_accuracy: 0.6827
+Epoch 12/50
+104/104 [==============================] - 0s 2ms/step - loss: 1.7112 - categorical_accuracy: 0.4327 - val_loss: 1.2867 - val_categorical_accuracy: 0.6683
+Epoch 13/50
+104/104 [==============================] - 0s 2ms/step - loss: 1.5802 - categorical_accuracy: 0.4766 - val_loss: 1.2071 - val_categorical_accuracy: 0.7139
+Epoch 14/50
+104/104 [==============================] - 0s 2ms/step - loss: 1.5628 - categorical_accuracy: 0.4898 - val_loss: 1.1537 - val_categorical_accuracy: 0.7308
+Epoch 15/50
+104/104 [==============================] - 0s 2ms/step - loss: 1.5061 - categorical_accuracy: 0.5066 - val_loss: 1.1030 - val_categorical_accuracy: 0.7452
+Epoch 16/50
+104/104 [==============================] - 0s 2ms/step - loss: 1.4997 - categorical_accuracy: 0.5054 - val_loss: 1.0643 - val_categorical_accuracy: 0.7740
+Epoch 17/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.4556 - categorical_accuracy: 0.5198 - val_loss: 1.0543 - val_categorical_accuracy: 0.7308
+Epoch 18/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.4011 - categorical_accuracy: 0.5595 - val_loss: 0.9906 - val_categorical_accuracy: 0.7620
+Epoch 19/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.3673 - categorical_accuracy: 0.5631 - val_loss: 0.9622 - val_categorical_accuracy: 0.7644
+Epoch 20/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.3373 - categorical_accuracy: 0.5715 - val_loss: 0.9210 - val_categorical_accuracy: 0.8005
+Epoch 21/50
+104/104 [==============================] - 0s 2ms/step - loss: 1.3032 - categorical_accuracy: 0.5715 - val_loss: 0.8747 - val_categorical_accuracy: 0.7957
+Epoch 22/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.2870 - categorical_accuracy: 0.5763 - val_loss: 0.8595 - val_categorical_accuracy: 0.8149
+Epoch 23/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.2581 - categorical_accuracy: 0.5968 - val_loss: 0.8299 - val_categorical_accuracy: 0.8029
+Epoch 24/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.2045 - categorical_accuracy: 0.6070 - val_loss: 0.8031 - val_categorical_accuracy: 0.8293
+Epoch 25/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.2251 - categorical_accuracy: 0.5980 - val_loss: 0.7817 - val_categorical_accuracy: 0.8317
+Epoch 26/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.2000 - categorical_accuracy: 0.6202 - val_loss: 0.7831 - val_categorical_accuracy: 0.8341
+Epoch 27/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.1645 - categorical_accuracy: 0.6184 - val_loss: 0.7373 - val_categorical_accuracy: 0.8389
+Epoch 28/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.1351 - categorical_accuracy: 0.6526 - val_loss: 0.7248 - val_categorical_accuracy: 0.8438
+Epoch 29/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.1308 - categorical_accuracy: 0.6430 - val_loss: 0.7227 - val_categorical_accuracy: 0.8221
+Epoch 30/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.1017 - categorical_accuracy: 0.6376 - val_loss: 0.6781 - val_categorical_accuracy: 0.8726
+Epoch 31/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.0709 - categorical_accuracy: 0.6508 - val_loss: 0.6693 - val_categorical_accuracy: 0.8486
+Epoch 32/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.0256 - categorical_accuracy: 0.6767 - val_loss: 0.6448 - val_categorical_accuracy: 0.8702
+Epoch 33/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.0132 - categorical_accuracy: 0.6815 - val_loss: 0.6316 - val_categorical_accuracy: 0.8678
+Epoch 34/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.0234 - categorical_accuracy: 0.6725 - val_loss: 0.6111 - val_categorical_accuracy: 0.8534
+Epoch 35/50
+104/104 [==============================] - 0s 2ms/step - loss: 1.0201 - categorical_accuracy: 0.6773 - val_loss: 0.6174 - val_categorical_accuracy: 0.8534
+Epoch 36/50
+104/104 [==============================] - 0s 2ms/step - loss: 0.9930 - categorical_accuracy: 0.6851 - val_loss: 0.5988 - val_categorical_accuracy: 0.8678
+Epoch 37/50
+104/104 [==============================] - 0s 2ms/step - loss: 0.9840 - categorical_accuracy: 0.6875 - val_loss: 0.5978 - val_categorical_accuracy: 0.8582
+Epoch 38/50
+104/104 [==============================] - 0s 2ms/step - loss: 0.9515 - categorical_accuracy: 0.6767 - val_loss: 0.5668 - val_categorical_accuracy: 0.8894
+Epoch 39/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.9324 - categorical_accuracy: 0.6923 - val_loss: 0.5597 - val_categorical_accuracy: 0.8702
+Epoch 40/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.9311 - categorical_accuracy: 0.7073 - val_loss: 0.5549 - val_categorical_accuracy: 0.8750
+Epoch 41/50
+104/104 [==============================] - 0s 2ms/step - loss: 0.8966 - categorical_accuracy: 0.7169 - val_loss: 0.5441 - val_categorical_accuracy: 0.8726
+Epoch 42/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.9214 - categorical_accuracy: 0.7055 - val_loss: 0.5239 - val_categorical_accuracy: 0.8726
+Epoch 43/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.9180 - categorical_accuracy: 0.7067 - val_loss: 0.5120 - val_categorical_accuracy: 0.8798
+Epoch 44/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.9086 - categorical_accuracy: 0.7091 - val_loss: 0.5118 - val_categorical_accuracy: 0.8774
+Epoch 45/50
+104/104 [==============================] - 0s 2ms/step - loss: 0.9071 - categorical_accuracy: 0.6977 - val_loss: 0.4984 - val_categorical_accuracy: 0.8774
+Epoch 46/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.8958 - categorical_accuracy: 0.7254 - val_loss: 0.5060 - val_categorical_accuracy: 0.8822
+Epoch 47/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.8755 - categorical_accuracy: 0.7151 - val_loss: 0.4948 - val_categorical_accuracy: 0.8918
+Epoch 48/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.9077 - categorical_accuracy: 0.7055 - val_loss: 0.4915 - val_categorical_accuracy: 0.8846
+Epoch 49/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.8613 - categorical_accuracy: 0.7133 - val_loss: 0.4702 - val_categorical_accuracy: 0.8822
+Epoch 50/50
+104/104 [==============================] - 0s 2ms/step - loss: 0.8749 - categorical_accuracy: 0.7224 - val_loss: 0.4761 - val_categorical_accuracy: 0.8918
+  Standalone accuracy: 90.00%
+
+  Distilling teacher to student (T=5.0, alpha=0.1)...
+Epoch 1/50
+104/104 [==============================] - 1s 5ms/step - categorical_accuracy: 0.0553 - student_loss: 3.2453 - distillation_loss: 49.8779 - val_categorical_accuracy: 0.0673 - val_student_loss: 3.2360
+Epoch 2/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.0649 - student_loss: 3.3296 - distillation_loss: 48.1030 - val_categorical_accuracy: 0.1298 - val_student_loss: 3.5063
+Epoch 3/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.0992 - student_loss: 3.5935 - distillation_loss: 44.8639 - val_categorical_accuracy: 0.1298 - val_student_loss: 3.7753
+Epoch 4/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.1118 - student_loss: 3.7235 - distillation_loss: 42.5520 - val_categorical_accuracy: 0.1803 - val_student_loss: 3.2844
+Epoch 5/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.1328 - student_loss: 3.5578 - distillation_loss: 40.8257 - val_categorical_accuracy: 0.1779 - val_student_loss: 3.1082
+Epoch 6/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.1466 - student_loss: 3.4245 - distillation_loss: 39.4569 - val_categorical_accuracy: 0.1995 - val_student_loss: 2.7430
+Epoch 7/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.1665 - student_loss: 3.3484 - distillation_loss: 37.9253 - val_categorical_accuracy: 0.2188 - val_student_loss: 2.6190
+Epoch 8/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.2097 - student_loss: 3.1730 - distillation_loss: 36.1748 - val_categorical_accuracy: 0.2837 - val_student_loss: 2.5550
+Epoch 9/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.2458 - student_loss: 3.0601 - distillation_loss: 34.0326 - val_categorical_accuracy: 0.3197 - val_student_loss: 2.3929
+Epoch 10/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.2590 - student_loss: 3.0466 - distillation_loss: 32.8185 - val_categorical_accuracy: 0.3413 - val_student_loss: 2.2495
+Epoch 11/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.2752 - student_loss: 2.9943 - distillation_loss: 31.5328 - val_categorical_accuracy: 0.4038 - val_student_loss: 1.9004
+Epoch 12/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.3221 - student_loss: 2.7632 - distillation_loss: 29.6817 - val_categorical_accuracy: 0.4423 - val_student_loss: 1.6387
+Epoch 13/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.3522 - student_loss: 2.6811 - distillation_loss: 29.1287 - val_categorical_accuracy: 0.4495 - val_student_loss: 1.5139
+Epoch 14/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.3558 - student_loss: 2.6292 - distillation_loss: 28.2689 - val_categorical_accuracy: 0.4928 - val_student_loss: 1.6825
+Epoch 15/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.3564 - student_loss: 2.6118 - distillation_loss: 27.7159 - val_categorical_accuracy: 0.4952 - val_student_loss: 1.4935
+Epoch 16/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.3774 - student_loss: 2.4320 - distillation_loss: 26.3741 - val_categorical_accuracy: 0.5216 - val_student_loss: 1.3071
+Epoch 17/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.3816 - student_loss: 2.5126 - distillation_loss: 26.2683 - val_categorical_accuracy: 0.5288 - val_student_loss: 1.1934
+Epoch 18/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.4056 - student_loss: 2.3911 - distillation_loss: 25.8253 - val_categorical_accuracy: 0.5168 - val_student_loss: 1.1290
+Epoch 19/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.4105 - student_loss: 2.4110 - distillation_loss: 25.0976 - val_categorical_accuracy: 0.5337 - val_student_loss: 1.3286
+Epoch 20/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.4213 - student_loss: 2.2438 - distillation_loss: 24.4505 - val_categorical_accuracy: 0.5505 - val_student_loss: 1.0079
+Epoch 21/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.4249 - student_loss: 2.2588 - distillation_loss: 24.3391 - val_categorical_accuracy: 0.5553 - val_student_loss: 0.9868
+Epoch 22/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.4273 - student_loss: 2.2000 - distillation_loss: 23.7807 - val_categorical_accuracy: 0.5697 - val_student_loss: 1.0091
+Epoch 23/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.4645 - student_loss: 2.0964 - distillation_loss: 22.7481 - val_categorical_accuracy: 0.6034 - val_student_loss: 0.9968
+Epoch 24/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.4688 - student_loss: 2.1603 - distillation_loss: 23.0576 - val_categorical_accuracy: 0.6010 - val_student_loss: 0.8316
+Epoch 25/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.4838 - student_loss: 1.9023 - distillation_loss: 21.8385 - val_categorical_accuracy: 0.6130 - val_student_loss: 0.8216
+Epoch 26/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.4820 - student_loss: 2.0478 - distillation_loss: 22.6178 - val_categorical_accuracy: 0.6130 - val_student_loss: 0.6353
+Epoch 27/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5216 - student_loss: 1.9434 - distillation_loss: 21.5925 - val_categorical_accuracy: 0.6226 - val_student_loss: 0.6001
+Epoch 28/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5000 - student_loss: 1.9050 - distillation_loss: 21.4935 - val_categorical_accuracy: 0.6418 - val_student_loss: 0.5813
+Epoch 29/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5066 - student_loss: 1.8797 - distillation_loss: 21.2595 - val_categorical_accuracy: 0.6611 - val_student_loss: 0.6395
+Epoch 30/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5325 - student_loss: 1.8727 - distillation_loss: 20.6162 - val_categorical_accuracy: 0.6779 - val_student_loss: 0.5443
+Epoch 31/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5126 - student_loss: 1.8906 - distillation_loss: 20.9933 - val_categorical_accuracy: 0.6947 - val_student_loss: 0.6392
+Epoch 32/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5373 - student_loss: 1.8139 - distillation_loss: 20.2649 - val_categorical_accuracy: 0.7139 - val_student_loss: 0.4381
+Epoch 33/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5445 - student_loss: 1.7657 - distillation_loss: 19.8455 - val_categorical_accuracy: 0.7043 - val_student_loss: 0.5377
+Epoch 34/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5457 - student_loss: 1.7067 - distillation_loss: 19.7448 - val_categorical_accuracy: 0.7163 - val_student_loss: 0.4890
+Epoch 35/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5559 - student_loss: 1.7941 - distillation_loss: 19.6025 - val_categorical_accuracy: 0.7091 - val_student_loss: 0.5827
+Epoch 36/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5673 - student_loss: 1.7120 - distillation_loss: 19.4820 - val_categorical_accuracy: 0.7332 - val_student_loss: 0.5378
+Epoch 37/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5685 - student_loss: 1.6389 - distillation_loss: 19.1099 - val_categorical_accuracy: 0.7284 - val_student_loss: 0.5214
+Epoch 38/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5962 - student_loss: 1.6258 - distillation_loss: 18.7210 - val_categorical_accuracy: 0.7115 - val_student_loss: 0.4745
+Epoch 39/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5877 - student_loss: 1.6188 - distillation_loss: 18.4740 - val_categorical_accuracy: 0.7404 - val_student_loss: 0.5486
+Epoch 40/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5919 - student_loss: 1.5836 - distillation_loss: 18.5386 - val_categorical_accuracy: 0.7548 - val_student_loss: 0.6200
+Epoch 41/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.6202 - student_loss: 1.5707 - distillation_loss: 18.3552 - val_categorical_accuracy: 0.7452 - val_student_loss: 0.5466
+Epoch 42/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.5877 - student_loss: 1.5638 - distillation_loss: 18.1536 - val_categorical_accuracy: 0.7812 - val_student_loss: 0.5160
+Epoch 43/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.6124 - student_loss: 1.4405 - distillation_loss: 17.7467 - val_categorical_accuracy: 0.7788 - val_student_loss: 0.5349
+Epoch 44/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.5944 - student_loss: 1.5667 - distillation_loss: 17.9166 - val_categorical_accuracy: 0.7620 - val_student_loss: 0.6878
+Epoch 45/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.6052 - student_loss: 1.6068 - distillation_loss: 18.2536 - val_categorical_accuracy: 0.7596 - val_student_loss: 0.5835
+Epoch 46/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.6112 - student_loss: 1.5365 - distillation_loss: 17.8908 - val_categorical_accuracy: 0.7837 - val_student_loss: 0.5332
+Epoch 47/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.6328 - student_loss: 1.4720 - distillation_loss: 17.0966 - val_categorical_accuracy: 0.7885 - val_student_loss: 0.5095
+Epoch 48/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.6202 - student_loss: 1.5060 - distillation_loss: 17.5885 - val_categorical_accuracy: 0.7837 - val_student_loss: 0.4684
+Epoch 49/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.6316 - student_loss: 1.4102 - distillation_loss: 16.9332 - val_categorical_accuracy: 0.7692 - val_student_loss: 0.5066
+Epoch 50/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.6208 - student_loss: 1.4743 - distillation_loss: 17.2589 - val_categorical_accuracy: 0.7861 - val_student_loss: 0.4940
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1776038009.898621    8852 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1776038009.898870    8852 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-04-13 00:53:29.899924: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\kishc\AppData\Local\Temp\tmpyy_89q9j
+2026-04-13 00:53:29.901486: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-04-13 00:53:29.901595: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\kishc\AppData\Local\Temp\tmpyy_89q9j
+I0000 00:00:1776038009.909514    8852 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+2026-04-13 00:53:29.910294: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-04-13 00:53:29.941299: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\kishc\AppData\Local\Temp\tmpyy_89q9j
+2026-04-13 00:53:29.949735: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 49932 microseconds.
+2026-04-13 00:53:30.005649: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+c:\python311\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+  Results for small:
+    Standalone accuracy: 90.00%
+    Distilled accuracy:  78.27%
+    KD improvement:      -11.73%
+    Size:                12.1 KB
+    Size reduction:      94.8%
+
+============================================================
+Student: medium
+============================================================
+  Training standalone (no teacher)...
+  Parameters: 7,674
+Epoch 1/50
+104/104 [==============================] - 1s 6ms/step - loss: 3.2013 - categorical_accuracy: 0.0541 - val_loss: 3.0521 - val_categorical_accuracy: 0.0865
+Epoch 2/50
+104/104 [==============================] - 0s 5ms/step - loss: 2.7990 - categorical_accuracy: 0.1196 - val_loss: 2.3662 - val_categorical_accuracy: 0.2692
+Epoch 3/50
+104/104 [==============================] - 0s 3ms/step - loss: 2.2701 - categorical_accuracy: 0.2734 - val_loss: 1.7262 - val_categorical_accuracy: 0.5120
+Epoch 4/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.8202 - categorical_accuracy: 0.4044 - val_loss: 1.3256 - val_categorical_accuracy: 0.6442
+Epoch 5/50
+104/104 [==============================] - 0s 3ms/step - loss: 1.4957 - categorical_accuracy: 0.5300 - val_loss: 1.0462 - val_categorical_accuracy: 0.7115
+Epoch 6/50
+104/104 [==============================] - 0s 4ms/step - loss: 1.3152 - categorical_accuracy: 0.5409 - val_loss: 0.9264 - val_categorical_accuracy: 0.7548
+Epoch 7/50
+104/104 [==============================] - 0s 4ms/step - loss: 1.1456 - categorical_accuracy: 0.6124 - val_loss: 0.7759 - val_categorical_accuracy: 0.8149
+Epoch 8/50
+104/104 [==============================] - 0s 4ms/step - loss: 1.0857 - categorical_accuracy: 0.6382 - val_loss: 0.7385 - val_categorical_accuracy: 0.7524
+Epoch 9/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.9321 - categorical_accuracy: 0.6983 - val_loss: 0.6312 - val_categorical_accuracy: 0.8413
+Epoch 10/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.8789 - categorical_accuracy: 0.7049 - val_loss: 0.6003 - val_categorical_accuracy: 0.8365
+Epoch 11/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.8222 - categorical_accuracy: 0.7398 - val_loss: 0.5411 - val_categorical_accuracy: 0.8534
+Epoch 12/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.7623 - categorical_accuracy: 0.7482 - val_loss: 0.5212 - val_categorical_accuracy: 0.8510
+Epoch 13/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.7422 - categorical_accuracy: 0.7566 - val_loss: 0.5417 - val_categorical_accuracy: 0.8534
+Epoch 14/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.6489 - categorical_accuracy: 0.7806 - val_loss: 0.4091 - val_categorical_accuracy: 0.9062
+Epoch 15/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.6653 - categorical_accuracy: 0.7825 - val_loss: 0.4402 - val_categorical_accuracy: 0.8798
+Epoch 16/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.6214 - categorical_accuracy: 0.7927 - val_loss: 0.3591 - val_categorical_accuracy: 0.8990
+Epoch 17/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.5678 - categorical_accuracy: 0.8161 - val_loss: 0.3803 - val_categorical_accuracy: 0.8846
+Epoch 18/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.5671 - categorical_accuracy: 0.8077 - val_loss: 0.3319 - val_categorical_accuracy: 0.9087
+Epoch 19/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.5801 - categorical_accuracy: 0.8065 - val_loss: 0.3389 - val_categorical_accuracy: 0.9159
+Epoch 20/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.5217 - categorical_accuracy: 0.8347 - val_loss: 0.3249 - val_categorical_accuracy: 0.9038
+Epoch 21/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.5019 - categorical_accuracy: 0.8438 - val_loss: 0.2932 - val_categorical_accuracy: 0.9135
+Epoch 22/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.4894 - categorical_accuracy: 0.8311 - val_loss: 0.3041 - val_categorical_accuracy: 0.9135
+Epoch 23/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.4612 - categorical_accuracy: 0.8468 - val_loss: 0.2772 - val_categorical_accuracy: 0.9255
+Epoch 24/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.4576 - categorical_accuracy: 0.8570 - val_loss: 0.2813 - val_categorical_accuracy: 0.9135
+Epoch 25/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.4265 - categorical_accuracy: 0.8672 - val_loss: 0.2918 - val_categorical_accuracy: 0.9111
+Epoch 26/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.4158 - categorical_accuracy: 0.8684 - val_loss: 0.2375 - val_categorical_accuracy: 0.9327
+Epoch 27/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.4388 - categorical_accuracy: 0.8582 - val_loss: 0.2576 - val_categorical_accuracy: 0.9231
+Epoch 28/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.4540 - categorical_accuracy: 0.8474 - val_loss: 0.2639 - val_categorical_accuracy: 0.9303
+Epoch 29/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.3872 - categorical_accuracy: 0.8642 - val_loss: 0.2645 - val_categorical_accuracy: 0.9159
+Epoch 30/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.4129 - categorical_accuracy: 0.8648 - val_loss: 0.2431 - val_categorical_accuracy: 0.9255
+Epoch 31/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.3864 - categorical_accuracy: 0.8762 - val_loss: 0.2309 - val_categorical_accuracy: 0.9279
+Epoch 32/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.3463 - categorical_accuracy: 0.8792 - val_loss: 0.2481 - val_categorical_accuracy: 0.9351
+Epoch 33/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.3576 - categorical_accuracy: 0.8828 - val_loss: 0.2216 - val_categorical_accuracy: 0.9255
+Epoch 34/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.3405 - categorical_accuracy: 0.8912 - val_loss: 0.2477 - val_categorical_accuracy: 0.9303
+Epoch 35/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.3226 - categorical_accuracy: 0.8912 - val_loss: 0.2367 - val_categorical_accuracy: 0.9327
+Epoch 36/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.3441 - categorical_accuracy: 0.8888 - val_loss: 0.2269 - val_categorical_accuracy: 0.9423
+Epoch 37/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.3206 - categorical_accuracy: 0.8972 - val_loss: 0.2259 - val_categorical_accuracy: 0.9399
+Epoch 38/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.3300 - categorical_accuracy: 0.9032 - val_loss: 0.2071 - val_categorical_accuracy: 0.9447
+Epoch 39/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.3190 - categorical_accuracy: 0.8936 - val_loss: 0.2291 - val_categorical_accuracy: 0.9375
+Epoch 40/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.3138 - categorical_accuracy: 0.9002 - val_loss: 0.2300 - val_categorical_accuracy: 0.9351
+Epoch 41/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.2838 - categorical_accuracy: 0.9117 - val_loss: 0.1859 - val_categorical_accuracy: 0.9351
+Epoch 42/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.2735 - categorical_accuracy: 0.9141 - val_loss: 0.2064 - val_categorical_accuracy: 0.9375
+Epoch 43/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.2819 - categorical_accuracy: 0.9129 - val_loss: 0.2079 - val_categorical_accuracy: 0.9471
+Epoch 44/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.2966 - categorical_accuracy: 0.8960 - val_loss: 0.1917 - val_categorical_accuracy: 0.9375
+Epoch 45/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.3097 - categorical_accuracy: 0.8948 - val_loss: 0.1957 - val_categorical_accuracy: 0.9375
+Epoch 46/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.2645 - categorical_accuracy: 0.9093 - val_loss: 0.2090 - val_categorical_accuracy: 0.9447
+Epoch 47/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.2541 - categorical_accuracy: 0.9189 - val_loss: 0.2176 - val_categorical_accuracy: 0.9471
+Epoch 48/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.2830 - categorical_accuracy: 0.9117 - val_loss: 0.2006 - val_categorical_accuracy: 0.9351
+Epoch 49/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.2547 - categorical_accuracy: 0.9219 - val_loss: 0.1869 - val_categorical_accuracy: 0.9471
+Epoch 50/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.2714 - categorical_accuracy: 0.9147 - val_loss: 0.1916 - val_categorical_accuracy: 0.9447
+  Standalone accuracy: 94.42%
+
+  Distilling teacher to student (T=5.0, alpha=0.1)...
+Epoch 1/50
+104/104 [==============================] - 2s 7ms/step - categorical_accuracy: 0.0547 - student_loss: 3.2823 - distillation_loss: 49.3948 - val_categorical_accuracy: 0.1106 - val_student_loss: 4.0052
+Epoch 2/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.1148 - student_loss: 3.8875 - distillation_loss: 43.3253 - val_categorical_accuracy: 0.1923 - val_student_loss: 3.8650
+Epoch 3/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.2055 - student_loss: 3.7074 - distillation_loss: 35.6402 - val_categorical_accuracy: 0.2740 - val_student_loss: 2.3390
+Epoch 4/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.2536 - student_loss: 3.1533 - distillation_loss: 31.6130 - val_categorical_accuracy: 0.3654 - val_student_loss: 1.7458
+Epoch 5/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.3335 - student_loss: 2.8108 - distillation_loss: 28.5142 - val_categorical_accuracy: 0.5168 - val_student_loss: 1.3531
+Epoch 6/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.4008 - student_loss: 2.5218 - distillation_loss: 26.1425 - val_categorical_accuracy: 0.5144 - val_student_loss: 1.5671
+Epoch 7/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.4633 - student_loss: 2.2530 - distillation_loss: 23.6491 - val_categorical_accuracy: 0.5745 - val_student_loss: 1.1423
+Epoch 8/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.4994 - student_loss: 2.0700 - distillation_loss: 21.7975 - val_categorical_accuracy: 0.6274 - val_student_loss: 1.2269
+Epoch 9/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.5487 - student_loss: 1.8058 - distillation_loss: 19.8965 - val_categorical_accuracy: 0.6659 - val_student_loss: 0.7412
+Epoch 10/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.5859 - student_loss: 1.6537 - distillation_loss: 18.7841 - val_categorical_accuracy: 0.7091 - val_student_loss: 0.9273
+Epoch 11/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.6184 - student_loss: 1.5563 - distillation_loss: 17.5525 - val_categorical_accuracy: 0.7452 - val_student_loss: 0.5259
+Epoch 12/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.6406 - student_loss: 1.4098 - distillation_loss: 16.1858 - val_categorical_accuracy: 0.7909 - val_student_loss: 0.4097
+Epoch 13/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.6743 - student_loss: 1.2506 - distillation_loss: 15.1044 - val_categorical_accuracy: 0.8197 - val_student_loss: 0.2229
+Epoch 14/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.6821 - student_loss: 1.2059 - distillation_loss: 14.6059 - val_categorical_accuracy: 0.8101 - val_student_loss: 0.3668
+Epoch 15/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.7133 - student_loss: 1.0557 - distillation_loss: 13.4566 - val_categorical_accuracy: 0.8293 - val_student_loss: 0.2134
+Epoch 16/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.7338 - student_loss: 1.0416 - distillation_loss: 13.1230 - val_categorical_accuracy: 0.8534 - val_student_loss: 0.2477
+Epoch 17/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.7260 - student_loss: 0.9624 - distillation_loss: 12.5073 - val_categorical_accuracy: 0.8438 - val_student_loss: 0.3261
+Epoch 18/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.7458 - student_loss: 0.8890 - distillation_loss: 12.0538 - val_categorical_accuracy: 0.8389 - val_student_loss: 0.3974
+Epoch 19/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.7596 - student_loss: 0.9484 - distillation_loss: 12.0989 - val_categorical_accuracy: 0.8654 - val_student_loss: 0.1919
+Epoch 20/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.7602 - student_loss: 0.8201 - distillation_loss: 11.3502 - val_categorical_accuracy: 0.8894 - val_student_loss: 0.1394
+Epoch 21/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.7903 - student_loss: 0.8261 - distillation_loss: 10.8671 - val_categorical_accuracy: 0.8846 - val_student_loss: 0.2329
+Epoch 22/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.7921 - student_loss: 0.7483 - distillation_loss: 10.4208 - val_categorical_accuracy: 0.8918 - val_student_loss: 0.1384
+Epoch 23/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.7975 - student_loss: 0.7500 - distillation_loss: 10.2776 - val_categorical_accuracy: 0.8942 - val_student_loss: 0.1076
+Epoch 24/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8011 - student_loss: 0.6928 - distillation_loss: 9.9168 - val_categorical_accuracy: 0.8630 - val_student_loss: 0.1360
+Epoch 25/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.8017 - student_loss: 0.7394 - distillation_loss: 9.9370 - val_categorical_accuracy: 0.8918 - val_student_loss: 0.1256
+Epoch 26/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.8089 - student_loss: 0.6682 - distillation_loss: 9.5972 - val_categorical_accuracy: 0.8990 - val_student_loss: 0.0650
+Epoch 27/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.8311 - student_loss: 0.6431 - distillation_loss: 9.1991 - val_categorical_accuracy: 0.8918 - val_student_loss: 0.1276
+Epoch 28/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8305 - student_loss: 0.6436 - distillation_loss: 8.9916 - val_categorical_accuracy: 0.8894 - val_student_loss: 0.1088
+Epoch 29/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8179 - student_loss: 0.6377 - distillation_loss: 9.1289 - val_categorical_accuracy: 0.9087 - val_student_loss: 0.1787
+Epoch 30/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8377 - student_loss: 0.5668 - distillation_loss: 8.6077 - val_categorical_accuracy: 0.9062 - val_student_loss: 0.1068
+Epoch 31/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.8438 - student_loss: 0.5531 - distillation_loss: 8.5742 - val_categorical_accuracy: 0.8918 - val_student_loss: 0.1848
+Epoch 32/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8552 - student_loss: 0.5695 - distillation_loss: 8.4813 - val_categorical_accuracy: 0.9159 - val_student_loss: 0.0419
+Epoch 33/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8558 - student_loss: 0.5015 - distillation_loss: 8.0154 - val_categorical_accuracy: 0.9159 - val_student_loss: 0.0540
+Epoch 34/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8438 - student_loss: 0.5458 - distillation_loss: 8.0637 - val_categorical_accuracy: 0.9014 - val_student_loss: 0.1456
+Epoch 35/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8438 - student_loss: 0.5258 - distillation_loss: 8.1684 - val_categorical_accuracy: 0.9207 - val_student_loss: 0.1007
+Epoch 36/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.8486 - student_loss: 0.5457 - distillation_loss: 8.3066 - val_categorical_accuracy: 0.9062 - val_student_loss: 0.0762
+Epoch 37/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.8600 - student_loss: 0.4884 - distillation_loss: 7.7388 - val_categorical_accuracy: 0.9231 - val_student_loss: 0.0549
+Epoch 38/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8612 - student_loss: 0.4978 - distillation_loss: 7.7193 - val_categorical_accuracy: 0.9183 - val_student_loss: 0.0164
+Epoch 39/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.8636 - student_loss: 0.4721 - distillation_loss: 7.6976 - val_categorical_accuracy: 0.9231 - val_student_loss: 0.0289
+Epoch 40/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8726 - student_loss: 0.4617 - distillation_loss: 7.5722 - val_categorical_accuracy: 0.9207 - val_student_loss: 0.0374
+Epoch 41/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8594 - student_loss: 0.5025 - distillation_loss: 7.4763 - val_categorical_accuracy: 0.9183 - val_student_loss: 0.0329
+Epoch 42/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8726 - student_loss: 0.4383 - distillation_loss: 7.3089 - val_categorical_accuracy: 0.9062 - val_student_loss: 0.1101
+Epoch 43/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8708 - student_loss: 0.4454 - distillation_loss: 7.1453 - val_categorical_accuracy: 0.9207 - val_student_loss: 0.0301
+Epoch 44/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8726 - student_loss: 0.4699 - distillation_loss: 7.4812 - val_categorical_accuracy: 0.9255 - val_student_loss: 0.0751
+Epoch 45/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.8768 - student_loss: 0.3985 - distillation_loss: 7.0279 - val_categorical_accuracy: 0.9303 - val_student_loss: 0.0313
+Epoch 46/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.8846 - student_loss: 0.3757 - distillation_loss: 6.9720 - val_categorical_accuracy: 0.9279 - val_student_loss: 0.0792
+Epoch 47/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.8894 - student_loss: 0.3544 - distillation_loss: 6.5847 - val_categorical_accuracy: 0.9303 - val_student_loss: 0.0252
+Epoch 48/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.8702 - student_loss: 0.4210 - distillation_loss: 6.6894 - val_categorical_accuracy: 0.9255 - val_student_loss: 0.0138
+Epoch 49/50
+104/104 [==============================] - 0s 3ms/step - categorical_accuracy: 0.8840 - student_loss: 0.4109 - distillation_loss: 6.7652 - val_categorical_accuracy: 0.9303 - val_student_loss: 0.0235
+Epoch 50/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8948 - student_loss: 0.3592 - distillation_loss: 6.5625 - val_categorical_accuracy: 0.9327 - val_student_loss: 0.0215
+W0000 00:00:1776038050.939247    8852 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1776038050.940249    8852 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-04-13 00:54:10.940749: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\kishc\AppData\Local\Temp\tmpyc7eh6jx
+2026-04-13 00:54:10.942625: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-04-13 00:54:10.942800: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\kishc\AppData\Local\Temp\tmpyc7eh6jx
+2026-04-13 00:54:10.948784: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-04-13 00:54:10.978929: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\kishc\AppData\Local\Temp\tmpyc7eh6jx
+2026-04-13 00:54:10.990325: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 49577 microseconds.
+c:\python311\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+
+  Results for medium:
+    Standalone accuracy: 94.42%
+    Distilled accuracy:  93.46%
+    KD improvement:      -0.96%
+    Size:                37.7 KB
+    Size reduction:      83.6%
+
+============================================================
+Student: big
+============================================================
+  Training standalone (no teacher)...
+  Parameters: 14,906
+Epoch 1/50
+104/104 [==============================] - 2s 8ms/step - loss: 3.1802 - categorical_accuracy: 0.0547 - val_loss: 2.9321 - val_categorical_accuracy: 0.0986
+Epoch 2/50
+104/104 [==============================] - 0s 3ms/step - loss: 2.6719 - categorical_accuracy: 0.1575 - val_loss: 2.2437 - val_categorical_accuracy: 0.2957
+Epoch 3/50
+104/104 [==============================] - 0s 5ms/step - loss: 2.0638 - categorical_accuracy: 0.3329 - val_loss: 1.6244 - val_categorical_accuracy: 0.5048
+Epoch 4/50
+104/104 [==============================] - 0s 4ms/step - loss: 1.5836 - categorical_accuracy: 0.4796 - val_loss: 1.2459 - val_categorical_accuracy: 0.6082
+Epoch 5/50
+104/104 [==============================] - 0s 5ms/step - loss: 1.2543 - categorical_accuracy: 0.5907 - val_loss: 0.9962 - val_categorical_accuracy: 0.7091
+Epoch 6/50
+104/104 [==============================] - 0s 4ms/step - loss: 1.0050 - categorical_accuracy: 0.6683 - val_loss: 0.7233 - val_categorical_accuracy: 0.7861
+Epoch 7/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.8423 - categorical_accuracy: 0.7224 - val_loss: 0.6401 - val_categorical_accuracy: 0.8245
+Epoch 8/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.7666 - categorical_accuracy: 0.7458 - val_loss: 0.5740 - val_categorical_accuracy: 0.8486
+Epoch 9/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.6667 - categorical_accuracy: 0.7861 - val_loss: 0.5011 - val_categorical_accuracy: 0.8630
+Epoch 10/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.6174 - categorical_accuracy: 0.8065 - val_loss: 0.4659 - val_categorical_accuracy: 0.8389
+Epoch 11/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.5444 - categorical_accuracy: 0.8107 - val_loss: 0.4491 - val_categorical_accuracy: 0.8582
+Epoch 12/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.5050 - categorical_accuracy: 0.8431 - val_loss: 0.4131 - val_categorical_accuracy: 0.8918
+Epoch 13/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.4694 - categorical_accuracy: 0.8540 - val_loss: 0.4956 - val_categorical_accuracy: 0.8438
+Epoch 14/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.4606 - categorical_accuracy: 0.8546 - val_loss: 0.3358 - val_categorical_accuracy: 0.9062
+Epoch 15/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.3745 - categorical_accuracy: 0.8822 - val_loss: 0.3234 - val_categorical_accuracy: 0.9062
+Epoch 16/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.4009 - categorical_accuracy: 0.8774 - val_loss: 0.2828 - val_categorical_accuracy: 0.9207
+Epoch 17/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.3605 - categorical_accuracy: 0.8732 - val_loss: 0.3096 - val_categorical_accuracy: 0.9111
+Epoch 18/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.3581 - categorical_accuracy: 0.8864 - val_loss: 0.2922 - val_categorical_accuracy: 0.9014
+Epoch 19/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.3112 - categorical_accuracy: 0.8918 - val_loss: 0.2692 - val_categorical_accuracy: 0.9183
+Epoch 20/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.2859 - categorical_accuracy: 0.9081 - val_loss: 0.2234 - val_categorical_accuracy: 0.9351
+Epoch 21/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.3028 - categorical_accuracy: 0.8954 - val_loss: 0.2190 - val_categorical_accuracy: 0.9375
+Epoch 22/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.2586 - categorical_accuracy: 0.9087 - val_loss: 0.1946 - val_categorical_accuracy: 0.9519
+Epoch 23/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.2465 - categorical_accuracy: 0.9183 - val_loss: 0.2176 - val_categorical_accuracy: 0.9183
+Epoch 24/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.2690 - categorical_accuracy: 0.9129 - val_loss: 0.2049 - val_categorical_accuracy: 0.9399
+Epoch 25/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.2656 - categorical_accuracy: 0.9177 - val_loss: 0.2253 - val_categorical_accuracy: 0.9327
+Epoch 26/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.2428 - categorical_accuracy: 0.9195 - val_loss: 0.1925 - val_categorical_accuracy: 0.9471
+Epoch 27/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.2034 - categorical_accuracy: 0.9369 - val_loss: 0.1751 - val_categorical_accuracy: 0.9471
+Epoch 28/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.2488 - categorical_accuracy: 0.9201 - val_loss: 0.1827 - val_categorical_accuracy: 0.9447
+Epoch 29/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.2054 - categorical_accuracy: 0.9285 - val_loss: 0.2005 - val_categorical_accuracy: 0.9375
+Epoch 30/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.2084 - categorical_accuracy: 0.9303 - val_loss: 0.1748 - val_categorical_accuracy: 0.9399
+Epoch 31/50
+104/104 [==============================] - 0s 4ms/step - loss: 0.2000 - categorical_accuracy: 0.9363 - val_loss: 0.1817 - val_categorical_accuracy: 0.9423
+Epoch 32/50
+104/104 [==============================] - 0s 3ms/step - loss: 0.1810 - categorical_accuracy: 0.9423 - val_loss: 0.1414 - val_categorical_accuracy: 0.9495
+  Standalone accuracy: 93.65%
+
+  Distilling teacher to student (T=5.0, alpha=0.1)...
+Epoch 1/50
+104/104 [==============================] - 2s 6ms/step - categorical_accuracy: 0.0799 - student_loss: 3.4742 - distillation_loss: 48.2775 - val_categorical_accuracy: 0.1082 - val_student_loss: 4.9425
+Epoch 2/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.1274 - student_loss: 3.9805 - distillation_loss: 40.6545 - val_categorical_accuracy: 0.1322 - val_student_loss: 3.5436
+Epoch 3/50
+104/104 [==============================] - 0s 5ms/step - categorical_accuracy: 0.1905 - student_loss: 3.3751 - distillation_loss: 35.2411 - val_categorical_accuracy: 0.2356 - val_student_loss: 3.3906
+Epoch 4/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.2873 - student_loss: 2.8478 - distillation_loss: 29.6261 - val_categorical_accuracy: 0.4159 - val_student_loss: 2.8676
+Epoch 5/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.4141 - student_loss: 2.3216 - distillation_loss: 24.5109 - val_categorical_accuracy: 0.6010 - val_student_loss: 2.4416
+Epoch 6/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.5150 - student_loss: 1.8920 - distillation_loss: 20.8467 - val_categorical_accuracy: 0.6514 - val_student_loss: 1.2786
+Epoch 7/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.5925 - student_loss: 1.6114 - distillation_loss: 18.0053 - val_categorical_accuracy: 0.7188 - val_student_loss: 1.2806
+Epoch 8/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.6635 - student_loss: 1.3057 - distillation_loss: 15.0425 - val_categorical_accuracy: 0.7380 - val_student_loss: 1.4631
+Epoch 9/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.6887 - student_loss: 1.1822 - distillation_loss: 13.6316 - val_categorical_accuracy: 0.7812 - val_student_loss: 0.8577
+Epoch 10/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.7338 - student_loss: 1.0465 - distillation_loss: 12.5954 - val_categorical_accuracy: 0.8077 - val_student_loss: 0.9964
+Epoch 11/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.7596 - student_loss: 0.8834 - distillation_loss: 10.9183 - val_categorical_accuracy: 0.8245 - val_student_loss: 0.7231
+Epoch 12/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.7933 - student_loss: 0.7565 - distillation_loss: 9.9994 - val_categorical_accuracy: 0.8389 - val_student_loss: 0.6381
+Epoch 13/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8053 - student_loss: 0.7251 - distillation_loss: 9.3998 - val_categorical_accuracy: 0.8534 - val_student_loss: 0.1747
+Epoch 14/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8071 - student_loss: 0.6430 - distillation_loss: 8.9172 - val_categorical_accuracy: 0.8534 - val_student_loss: 0.5937
+Epoch 15/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8245 - student_loss: 0.6090 - distillation_loss: 8.4246 - val_categorical_accuracy: 0.8678 - val_student_loss: 0.4335
+Epoch 16/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8401 - student_loss: 0.5524 - distillation_loss: 7.8717 - val_categorical_accuracy: 0.8726 - val_student_loss: 0.6662
+Epoch 17/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8401 - student_loss: 0.5336 - distillation_loss: 7.5522 - val_categorical_accuracy: 0.8702 - val_student_loss: 0.4954
+Epoch 18/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8522 - student_loss: 0.5373 - distillation_loss: 7.0767 - val_categorical_accuracy: 0.8774 - val_student_loss: 0.3751
+Epoch 19/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8666 - student_loss: 0.4831 - distillation_loss: 6.9861 - val_categorical_accuracy: 0.8798 - val_student_loss: 0.3602
+Epoch 20/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8660 - student_loss: 0.4480 - distillation_loss: 6.5529 - val_categorical_accuracy: 0.9255 - val_student_loss: 0.1619
+Epoch 21/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8756 - student_loss: 0.4622 - distillation_loss: 6.2495 - val_categorical_accuracy: 0.9062 - val_student_loss: 0.3094
+Epoch 22/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8864 - student_loss: 0.3999 - distillation_loss: 5.9805 - val_categorical_accuracy: 0.9159 - val_student_loss: 0.2037
+Epoch 23/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8882 - student_loss: 0.3628 - distillation_loss: 5.7978 - val_categorical_accuracy: 0.9062 - val_student_loss: 0.2649
+Epoch 24/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8996 - student_loss: 0.3370 - distillation_loss: 5.4602 - val_categorical_accuracy: 0.9231 - val_student_loss: 0.2330
+Epoch 25/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.8942 - student_loss: 0.3514 - distillation_loss: 5.6991 - val_categorical_accuracy: 0.9111 - val_student_loss: 0.5480
+Epoch 26/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9020 - student_loss: 0.3206 - distillation_loss: 5.2838 - val_categorical_accuracy: 0.9423 - val_student_loss: 0.1398
+Epoch 27/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9099 - student_loss: 0.3122 - distillation_loss: 4.9883 - val_categorical_accuracy: 0.9495 - val_student_loss: 0.0664
+Epoch 28/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9177 - student_loss: 0.2553 - distillation_loss: 4.7717 - val_categorical_accuracy: 0.9423 - val_student_loss: 0.0812
+Epoch 29/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9141 - student_loss: 0.2796 - distillation_loss: 4.9243 - val_categorical_accuracy: 0.9255 - val_student_loss: 0.2575
+Epoch 30/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9231 - student_loss: 0.2701 - distillation_loss: 4.8268 - val_categorical_accuracy: 0.9399 - val_student_loss: 0.1880
+Epoch 31/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9243 - student_loss: 0.2585 - distillation_loss: 4.5592 - val_categorical_accuracy: 0.9399 - val_student_loss: 0.2563
+Epoch 32/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9303 - student_loss: 0.2419 - distillation_loss: 4.4397 - val_categorical_accuracy: 0.9591 - val_student_loss: 0.0500
+Epoch 33/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9249 - student_loss: 0.2490 - distillation_loss: 4.3623 - val_categorical_accuracy: 0.9543 - val_student_loss: 0.0777
+Epoch 34/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9279 - student_loss: 0.2380 - distillation_loss: 4.3191 - val_categorical_accuracy: 0.9495 - val_student_loss: 0.1007
+Epoch 35/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9249 - student_loss: 0.2512 - distillation_loss: 4.3260 - val_categorical_accuracy: 0.9591 - val_student_loss: 0.0834
+Epoch 36/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9327 - student_loss: 0.2219 - distillation_loss: 4.0907 - val_categorical_accuracy: 0.9471 - val_student_loss: 0.0425
+Epoch 37/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9273 - student_loss: 0.2371 - distillation_loss: 4.0927 - val_categorical_accuracy: 0.9615 - val_student_loss: 0.0478
+Epoch 38/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9423 - student_loss: 0.1923 - distillation_loss: 3.9179 - val_categorical_accuracy: 0.9591 - val_student_loss: 0.1013
+Epoch 39/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9381 - student_loss: 0.2062 - distillation_loss: 4.0800 - val_categorical_accuracy: 0.9567 - val_student_loss: 0.0412
+Epoch 40/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9447 - student_loss: 0.1831 - distillation_loss: 3.9288 - val_categorical_accuracy: 0.9615 - val_student_loss: 0.0968
+Epoch 41/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9399 - student_loss: 0.1948 - distillation_loss: 3.6365 - val_categorical_accuracy: 0.9591 - val_student_loss: 0.0306
+Epoch 42/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9357 - student_loss: 0.1958 - distillation_loss: 3.7780 - val_categorical_accuracy: 0.9447 - val_student_loss: 0.1621
+Epoch 43/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9393 - student_loss: 0.1912 - distillation_loss: 3.8643 - val_categorical_accuracy: 0.9663 - val_student_loss: 0.0160
+Epoch 44/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9477 - student_loss: 0.1784 - distillation_loss: 3.6404 - val_categorical_accuracy: 0.9615 - val_student_loss: 0.1036
+Epoch 45/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9435 - student_loss: 0.1852 - distillation_loss: 3.6518 - val_categorical_accuracy: 0.9567 - val_student_loss: 0.0241
+Epoch 46/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9465 - student_loss: 0.1641 - distillation_loss: 3.5554 - val_categorical_accuracy: 0.9639 - val_student_loss: 0.0214
+Epoch 47/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9531 - student_loss: 0.1575 - distillation_loss: 3.4256 - val_categorical_accuracy: 0.9591 - val_student_loss: 0.1697
+Epoch 48/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9495 - student_loss: 0.1338 - distillation_loss: 3.3255 - val_categorical_accuracy: 0.9615 - val_student_loss: 0.0208
+Epoch 49/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9477 - student_loss: 0.1637 - distillation_loss: 3.4418 - val_categorical_accuracy: 0.9639 - val_student_loss: 0.0573
+Epoch 50/50
+104/104 [==============================] - 0s 4ms/step - categorical_accuracy: 0.9465 - student_loss: 0.1571 - distillation_loss: 3.3692 - val_categorical_accuracy: 0.9591 - val_student_loss: 0.0863
+W0000 00:00:1776038088.843238    8852 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1776038088.843494    8852 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-04-13 00:54:48.844031: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\kishc\AppData\Local\Temp\tmp8cbgzo1_
+2026-04-13 00:54:48.846140: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-04-13 00:54:48.846281: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\kishc\AppData\Local\Temp\tmp8cbgzo1_
+2026-04-13 00:54:48.854712: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-04-13 00:54:48.903902: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\kishc\AppData\Local\Temp\tmp8cbgzo1_
+2026-04-13 00:54:48.914709: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 70679 microseconds.
+c:\python311\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+
+  Results for big:
+    Standalone accuracy: 93.65%
+    Distilled accuracy:  95.96%
+    KD improvement:      +2.31%
+    Size:                66.9 KB
+    Size reduction:      71.0%
+
+============================================================
+KNOWLEDGE DISTILLATION SUMMARY
+============================================================
+Student        Params   Standalone    Distilled    KD Gain   Size(KB)  Size Red.
+----------------------------------------------------------------------------
+Teacher        56,922       98.27%            -          -      230.3          -
+small           1,802       90.00%       78.27%    -11.73%       12.1      94.8%
+medium          7,674       94.42%       93.46%     -0.96%       37.7      83.6%
+big            14,906       93.65%       95.96%     +2.31%       66.9      71.0%
+
+Files saved to: c:\Users\kishc\OneDrive\Desktop\undergradthesis\model training\knowledge distillation\new_results
+PS C:\Users\kishc\OneDrive\Desktop\undergradthesis> 

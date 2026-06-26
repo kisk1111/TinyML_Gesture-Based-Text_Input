@@ -1,0 +1,81 @@
+PS C:\Users\kishc\OneDrive\Desktop\undergradthesis>  & 'c:\python311\python.exe' 'c:\Users\kishc\.vscode\extensions\ms-python.debugpy-2025.18.0-win32-x64\bundled\libs\debugpy\launcher' '49755' '--' 'c:\Users\kishc\OneDrive\Desktop\undergradthesis\model training\kd quant\kqquant.py' 
+2026-04-13 01:39:56.206235: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-04-13 01:39:58.845613: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+c:\python311\Lib\site-packages\keras\src\export\tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+WARNING:tensorflow:From c:\python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+============================================================
+Loading data...
+============================================================
+Train: 2080, Test: 520, Classes: 26
+
+Loading KD student 'big' from: c:\Users\kishc\OneDrive\Desktop\undergradthesis\model training\kd quant\..\knowledge distillation\new_results\model_kd_big.keras
+2026-04-13 01:40:04.984421: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From c:\python311\Lib\site-packages\tf_keras\src\backend.py:1400: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING:tensorflow:From c:\python311\Lib\site-packages\tf_keras\src\backend.py:6644: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+Parameters: 14,906
+
+============================================================
+Float16 Quantisation
+============================================================
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1776040806.559266   36072 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1776040806.559570   36072 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-04-13 01:40:06.560193: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\kishc\AppData\Local\Temp\tmpmia1ltoc
+2026-04-13 01:40:06.563106: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-04-13 01:40:06.563168: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\kishc\AppData\Local\Temp\tmpmia1ltoc
+I0000 00:00:1776040806.574401   36072 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled
+2026-04-13 01:40:06.576045: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-04-13 01:40:06.607525: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\kishc\AppData\Local\Temp\tmpmia1ltoc
+2026-04-13 01:40:06.620004: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 59813 microseconds.
+2026-04-13 01:40:06.648978: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+c:\python311\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+  Size:     39.2 KB
+  Accuracy: 95.96%
+
+============================================================
+Int8 Quantisation
+============================================================
+c:\python311\Lib\site-packages\tensorflow\lite\python\convert.py:863: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+W0000 00:00:1776040807.686764   36072 tf_tfl_flatbuffer_helpers.cc:364] Ignored output_format.
+W0000 00:00:1776040807.686939   36072 tf_tfl_flatbuffer_helpers.cc:367] Ignored drop_control_dependency.
+2026-04-13 01:40:07.687325: I tensorflow/cc/saved_model/reader.cc:83] Reading SavedModel from: C:\Users\kishc\AppData\Local\Temp\tmpejw9p75x
+2026-04-13 01:40:07.689167: I tensorflow/cc/saved_model/reader.cc:52] Reading meta graph with tags { serve }
+2026-04-13 01:40:07.689284: I tensorflow/cc/saved_model/reader.cc:147] Reading SavedModel debug info (if present) from: C:\Users\kishc\AppData\Local\Temp\tmpejw9p75x
+2026-04-13 01:40:07.698159: I tensorflow/cc/saved_model/loader.cc:236] Restoring SavedModel bundle.
+2026-04-13 01:40:07.730654: I tensorflow/cc/saved_model/loader.cc:220] Running initialization op on SavedModel bundle at path: C:\Users\kishc\AppData\Local\Temp\tmpejw9p75x
+2026-04-13 01:40:07.739411: I tensorflow/cc/saved_model/loader.cc:471] SavedModel load for tags { serve }; Status: success: OK. Took 52087 microseconds.
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+2026-04-13 01:40:07.831908: W tensorflow/compiler/mlir/lite/flatbuffer_export.cc:3705] Skipping runtime version metadata in the model. This will be generated by the exporter.
+c:\python311\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+  Size:     30.0 KB
+  Accuracy: 95.38%
+
+============================================================
+SUMMARY
+============================================================
+Model                           Size (KB)   Accuracy  Size Red.
+--------------------------------------------------------------
+Baseline (float32)                  230.3     98.27%          -
+KD big (float32)                        ?          ?          -
+KD big + Float16                     39.2     95.96%      83.0%
+KD big + Int8                        30.0     95.38%      87.0%
+
+Files saved to: c:\Users\kishc\OneDrive\Desktop\undergradthesis\model training\kd quant\new_results
+PS C:\Users\kishc\OneDrive\Desktop\undergradthesis> 
